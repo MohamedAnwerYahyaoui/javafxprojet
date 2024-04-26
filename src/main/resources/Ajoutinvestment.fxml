@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="463.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Ajoutinvestment">
+   <children>
+      <VBox layoutX="35.0" layoutY="70.0" prefHeight="298.0" prefWidth="204.0">
+         <children>
+            <ImageView fitHeight="119.0" fitWidth="204.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/img/arabian_banch.jpg" />
+               </image>
+            </ImageView>
+            <TextField text="arabian banch" />
+            <TextArea prefHeight="101.0" prefWidth="204.0" text="jkfjfkfkf&#10;kfkfkf" />
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="270.0" layoutY="70.0" prefHeight="265.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="119.0" fitWidth="204.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/img/marina.jpg" />
+               </image>
+            </ImageView>
+            <TextField text="marina" />
+            <TextArea prefHeight="131.0" prefWidth="204.0" text="kk&#10;kkk" />
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="511.0" layoutY="70.0" prefHeight="265.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="119.0" fitWidth="204.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/img/al_qudra.jpg" />
+               </image>
+            </ImageView>
+            <TextField text="alQudra" />
+            <TextArea prefHeight="123.0" prefWidth="204.0" text="fjjfjfjf&#10;fkfkfk" />
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+      <Button layoutX="25.0" layoutY="390.0" mnemonicParsing="false" onAction="#load_add" text="add investment" />
+      <Button layoutX="137.0" layoutY="390.0" mnemonicParsing="false" onAction="#load_add" text="edit investment" />
+      <Button layoutX="254.0" layoutY="390.0" mnemonicParsing="false" onAction="#load_add" text="delete investment" />
+   </children>
+</AnchorPane>
