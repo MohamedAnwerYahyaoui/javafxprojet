@@ -14,8 +14,12 @@ public class Investment {
         this.description_invest = description_invest;
     }
 
-
-
+    public Investment(int id, String image, String nom_invest, String description_invest) {
+        this.id = id;
+        this.image = image;
+        this.nom_invest = nom_invest;
+        this.description_invest = description_invest;
+    }
 
     public int getId() {
         return id;
@@ -34,7 +38,7 @@ public class Investment {
     }
 
     public String getNom_invest() {
-        return nom_invest;
+        return nom_invest != null ? nom_invest : "";
     }
 
     public void setNom_invest(String nom_invest) {

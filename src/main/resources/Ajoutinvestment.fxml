@@ -3,47 +3,75 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="463.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Ajoutinvestment">
+<AnchorPane fx:id="mainId" prefHeight="677.0" prefWidth="932.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Ajoutinvestment">
    <children>
-      <VBox layoutX="35.0" layoutY="70.0" prefHeight="298.0" prefWidth="204.0">
+      <AnchorPane layoutX="14.0" layoutY="69.0" prefHeight="518.0" prefWidth="238.0">
          <children>
-            <ImageView fitHeight="119.0" fitWidth="204.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@/img/arabian_banch.jpg" />
-               </image>
-            </ImageView>
-            <TextField text="arabian banch" />
-            <TextArea prefHeight="101.0" prefWidth="204.0" text="jkfjfkfkf&#10;kfkfkf" />
-            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <Button layoutX="91.0" layoutY="497.0" mnemonicParsing="false" onAction="#suppBtn" text="Supprimer" />
+            <Button layoutX="21.0" layoutY="498.0" mnemonicParsing="false" onAction="#clearBtn" text="Clear" />
+            <Button layoutX="90.0" layoutY="465.0" mnemonicParsing="false" onAction="#editBtn" text="Edit" />
+            <Button layoutX="20.0" layoutY="465.0" mnemonicParsing="false" onAction="#ajoutBtn" text="Ajout" />
+            <Button layoutX="56.0" layoutY="167.0" mnemonicParsing="false" onAction="#imgImpoBtn" text="import image">
+               <font>
+                  <Font name="Arial Nova" size="15.0" />
+               </font>
+            </Button>
+            <AnchorPane layoutX="21.0" layoutY="14.0" prefHeight="142.0" prefWidth="159.0" style="-fx-background-color: #777;">
+               <children>
+                  <ImageView fx:id="imgId" fitHeight="126.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="14.0" layoutY="247.0" text="Investissement">
+               <font>
+                  <Font name="Arial Nova" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="318.0" text="Description">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nomTF" layoutX="13.0" layoutY="279.0" />
+            <TextArea fx:id="descTA" layoutX="17.0" layoutY="353.0" prefHeight="98.0" prefWidth="142.0" />
          </children>
-      </VBox>
-      <VBox layoutX="270.0" layoutY="70.0" prefHeight="265.0" prefWidth="200.0">
+      </AnchorPane>
+      <AnchorPane layoutX="293.0" layoutY="69.0" prefHeight="538.0" prefWidth="627.0">
          <children>
-            <ImageView fitHeight="119.0" fitWidth="204.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@/img/marina.jpg" />
-               </image>
-            </ImageView>
-            <TextField text="marina" />
-            <TextArea prefHeight="131.0" prefWidth="204.0" text="kk&#10;kkk" />
-            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <TextField fx:id="searchBtn" layoutX="214.0" layoutY="32.0" />
+            <TableView fx:id="tablev" layoutX="-1.0" layoutY="88.0" prefHeight="450.0" prefWidth="627.0">
+              <columns>
+                <TableColumn fx:id="imgCol" prefWidth="77.20001220703125" text="image" />
+                <TableColumn fx:id="investissementCol" prefWidth="210.0" text="investissement" />
+                  <TableColumn fx:id="descriptionCol" prefWidth="340.0" text="description" />
+              </columns>
+            </TableView>
+            <Label layoutX="114.0" layoutY="26.0" text="search" textFill="#e50e0e">
+               <font>
+                  <Font name="Arial Nova Italic" size="29.0" />
+               </font>
+            </Label>
          </children>
-      </VBox>
-      <VBox layoutX="511.0" layoutY="70.0" prefHeight="265.0" prefWidth="200.0">
+      </AnchorPane>
+      <AnchorPane layoutX="402.0" layoutY="14.0" prefHeight="62.0" prefWidth="409.0">
          <children>
-            <ImageView fitHeight="119.0" fitWidth="204.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@/img/al_qudra.jpg" />
-               </image>
-            </ImageView>
-            <TextField text="alQudra" />
-            <TextArea prefHeight="123.0" prefWidth="204.0" text="fjjfjfjf&#10;fkfkfk" />
-            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <Text fill="#070a96c9" layoutX="-9.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Les Investissement">
+               <font>
+                  <Font name="Arial Nova Cond Light" size="44.0" />
+               </font>
+            </Text>
          </children>
-      </VBox>
-      <Button layoutX="25.0" layoutY="390.0" mnemonicParsing="false" onAction="#load_add" text="add investment" />
-      <Button layoutX="137.0" layoutY="390.0" mnemonicParsing="false" onAction="#load_add" text="edit investment" />
-      <Button layoutX="254.0" layoutY="390.0" mnemonicParsing="false" onAction="#load_add" text="delete investment" />
+      </AnchorPane>
+      <Button layoutX="440.0" layoutY="629.0" mnemonicParsing="false" onAction="#detailsBtn" text="Details">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Text layoutX="38.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Formulaire d'ajout" wrappingWidth="175.20000000000005">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
